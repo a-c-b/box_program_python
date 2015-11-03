@@ -1,7 +1,3 @@
-def box_depth (cards):
-	d = (cards/10) * 5/16	#every 10 cards = 5/16"
-	return d			#return the depth of the box to be expected.
-
 def numlines(lines):
 		i = (float(lines)/18)* 2.5 #every 18 lines in 8 pt = 2.5" long
 		print "/nPrinting i now %f2" % i
@@ -85,36 +81,29 @@ def Funkshun (RA, book):	#pass the RunAgain variable for the initial run and the
 			RA = 1
 		else:
 			RA = 2
-		
-		print "The End "
 
+def AddPoems():
+	print "Which file do you want to use for input?" 
+	filename = raw_input("> ")
+	print "Filename %r." % filename  
+	print "If you don't want that, hit CTRL-C (^C)."
+	print "If you do want that, hit RETURN."
+	raw_input("?")
+	print "Opening the file..."
+	book = open(filename, 'a+') # open the filename object in write mode
+	RA = 1		#variable to track whether to Run the module Again
+	print "\n"
+	Funkshun(RA, book)	
+	book.close()	#close the file
+
+			
+		
 from fractions import Fraction	
 from decimal import Decimal
 
+start
 
 
-print "Which file do you want to use for input?" 
-filename = raw_input("> ")
-print "Filename %r." % filename  
-print "If you don't want that, hit CTRL-C (^C)."
-print "If you do want that, hit RETURN."
-raw_input("?")
-print "Opening the file..."
-book = open(filename, 'a+') # open the filename object in write mode
-#bookInfo = book.read()		#read the data into 				
-#num_lines = sum(1 for line in bookInfo)	
-
-	#empty list which will be sent to a file, or appended to a file (later when I figure out how to do that.)
-RA = 1		#variable to track whether to Run the module Again
-TitleCt = 0	#will need to modify logic when I figure out how to open the lists and grab the last record.
-#print "\n\n\n The number of records in the file are: %d " % num_lines
-print "\n"
-#print "The info in the file is:", bookInfo	
-print "\n\n\n\n\n"
-Funkshun(RA, book)	
-
-
-book.close()	#close the file
 
  ##  command to create the empty file:  
  #echo "Title, TotWords, TotChar, LLWords, LLChar, NumLines, InchesLong, CharWidth, Min2Set, Hr2Set" > tmb.txt
