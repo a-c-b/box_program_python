@@ -25,7 +25,7 @@ continued opportunity to work with version control, github, and updating my port
 
 ##19Oct2015 - Program descriptions:
 
-#### boxsize2.py:
+#### [boxsize2.py](https://github.com/andrea345/box_program_python/blob/master/boxsize2.py):
 The function of boxsize2.py is to do fractional math for me.  I'm also working with data type conversions,
 definition syntax, looping, and inputs.
 
@@ -34,7 +34,7 @@ the second is a lidded one.  The program is supposed to add the slop factors to 
 as well as work with decimal to fractional (& vv) conversions because I don't know the decimal equivalent
 of 5/16" of an inch.  The program also spits out where to make my cut marks on a piece of paper.
 
-####boxNCards.py
+####[boxNCards.py](https://github.com/andrea345/box_program_python/blob/master/boxNcards.py)
 This is my inventory data entry program.  Its function is to capture the title, the number of words,
 characters, the longest line words & characters, and the number of lines in the poem.  It then calculates
 the expected length and width of the poem when using an [8point Spartan Medium](https://books.google.com/books?id=eTJ8khmZie0C&pg=PA440&lpg=PA440&dq=8+point+spartan+medium+type&source=bl&ots=g7Fk_1NrzY&sig=QWEwfwPjog7_JtAEJV2PDsCrgtE&hl=en&sa=X&ved=0CB0Q6AEwAGoVChMIj5S75b3PyAIVyC2ICh2zhQEc#v=onepage&q=8%20point%20spartan%20medium%20type&f=false)
