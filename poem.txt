@@ -1,0 +1,3 @@
+Title, TotWords, TotChar, LLWords, LLChar, NumLines, InchesLong, CharWidth, Min2Set, Hr2Set
+The Visit,268,1500,12,62,38,5.28,2.48,574.29,9.57
+Response  to 'Live',280,1414,6,36,61,8.47,1.44,600.00,10.00

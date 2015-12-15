@@ -1,6 +1,9 @@
+def box_depth (cards):
+	d = (cards/10) * 5/16	#every 10 cards = 5/16"
+	return d			#return the depth of the box to be expected.
+
 def numlines(lines):
 		i = (float(lines)/18)* 2.5 #every 18 lines in 8 pt = 2.5" long
-		print "/nPrinting i now %f2" % i
 		return i				#return the number of inches for the poem
 		
 def charwide(char):
@@ -13,16 +16,15 @@ def typehours(wordz):
 
 def Funkshun (RA, book):	#pass the RunAgain variable for the initial run and the file name for the book.
 	while RA < 2:
-		poem = []		#empty list to capture info
+		poem = []		#empty list with headers to capture info
 		
 		title = raw_input("What is the title of the poem? ") 
 		wordz = raw_input("What are the total number of words in the piece? ") 
 		char = raw_input("What are the total number of characters in the piece? ")
 		LLwordz = raw_input("How many words are in the longest line? ") 
 		LLchar = raw_input("How many characters are in the longest line? ") 
-		lines = raw_input("How many lines in the poem? ") 
-		
-		#d = raw_input ("\nHow many cards do you want to calculate? ") 
+		lines = raw_input("How many lines in the poem? ") #
+		print "\n\n" 
 		
 		#convert the string inputs to recognizeable numbers
 		lines = lines
@@ -35,10 +37,7 @@ def Funkshun (RA, book):	#pass the RunAgain variable for the initial run and the
 		LLchar_width = charwide(LLchar)
 		time = typehours(wordz)
 		timeh = time/60
-		#print d
-		#in_long = float(in_long)
 		
-		print "\n %f2 \n" % in_long
 		print "The poem will be %.2f inches long." % in_long
 		print "The max width of the poem with be %.2f inches wide. "% LLchar_width
 		print "The expected amount of time for basic typesetting will be %.2f hours, or %.2f minutes."  % (timeh, time)
@@ -81,33 +80,32 @@ def Funkshun (RA, book):	#pass the RunAgain variable for the initial run and the
 			RA = 1
 		else:
 			RA = 2
-
-def AddPoems():
-	print "Which file do you want to use for input?" 
-	filename = raw_input("> ")
-	print "Filename %r." % filename  
-	print "If you don't want that, hit CTRL-C (^C)."
-	print "If you do want that, hit RETURN."
-	raw_input("?")
-	print "Opening the file..."
-	book = open(filename, 'a+') # open the filename object in write mode
-	RA = 1		#variable to track whether to Run the module Again
-	print "\n"
-	Funkshun(RA, book)	
-	book.close()	#close the file
-
-			
 		
+		print "Input Accepted "
+
 from fractions import Fraction	
 from decimal import Decimal
 
-start
 
 
+print "Which file do you want to use for input?" 
+filename = raw_input("> ")
+print "Filename %r." % filename  
+print "If you don't want that, hit CTRL-C (^C)."
+print "If you do want that, hit RETURN."
+raw_input("?")
+print "Opening the file..."
+book = open(filename, 'a+') # open the filename object in write mode.  This always appends.
+#add headers to the txt file
+book.write("Title, TotWords, TotChar, LLWords, LLChar, NumLines, InchesLong, CharWidth, Min2Set, Hr2Set\n") 
+RA = 1		#variable to track whether to Run the module Again
+
+print "\n"
+#print "The info in the file is:", bookInfo	
+print "\n\n"
+Funkshun(RA, book)	
+book.close()	#close the file
 
  ##  command to create the empty file:  
  #echo "Title, TotWords, TotChar, LLWords, LLChar, NumLines, InchesLong, CharWidth, Min2Set, Hr2Set" > tmb.txt
-
-
-
 
